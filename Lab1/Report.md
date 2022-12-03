@@ -33,6 +33,9 @@ Date of finished: .12.2022 <br />
 
 > minikube start
 
+![image](https://user-images.githubusercontent.com/71637557/205462612-b9110e58-01e7-4285-a1e0-47ff052296de.png)
+
+
 2.  После запуска minikube cluster вы сможете взаимодействовать с k8s используя команду:
 
 > minikube kubectl
