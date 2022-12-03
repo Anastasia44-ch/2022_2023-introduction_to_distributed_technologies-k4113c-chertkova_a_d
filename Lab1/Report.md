@@ -196,15 +196,15 @@ Kubelet управляет pod'ами их контейнерами, образ�
 
 # Ссылки для работы
 
-https://www.docker.com
-https://minikube.sigs.k8s.io/docs/
-https://minikube.sigs.k8s.io/docs/start/
-https://docs.docker.com/get-started/
-https://kubernetes.io/ru/docs/tutorials/hello-minikube/
-https://kubernetes.io/ru/docs/tutorials/kubernetes-basics/
-https://kubernetes.io/docs/home/
-https://habr.com/ru/post/258443/
-https://stepik.org/lesson/550144/step/2?unit=543781
-https://hub.docker.com/_/vault/
-https://www.vaultproject.io
+https://www.docker.com <br />
+https://minikube.sigs.k8s.io/docs/ <br />
+https://minikube.sigs.k8s.io/docs/start/ <br />
+https://docs.docker.com/get-started/ <br />
+https://kubernetes.io/ru/docs/tutorials/hello-minikube/ <br />
+https://kubernetes.io/ru/docs/tutorials/kubernetes-basics/ <br />
+https://kubernetes.io/docs/home/ <br />
+https://habr.com/ru/post/258443/ <br />
+https://stepik.org/lesson/550144/step/2?unit=543781 <br />
+https://hub.docker.com/_/vault/ <br />
+https://www.vaultproject.io <br />
 
