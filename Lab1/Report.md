@@ -198,6 +198,7 @@ https://kubernetes.io/ru/docs/tutorials/hello-minikube/
 https://kubernetes.io/ru/docs/tutorials/kubernetes-basics/
 https://kubernetes.io/docs/home/
 https://habr.com/ru/post/258443/
+https://stepik.org/lesson/550144/step/2?unit=543781
 https://hub.docker.com/_/vault/
 https://www.vaultproject.io
 
