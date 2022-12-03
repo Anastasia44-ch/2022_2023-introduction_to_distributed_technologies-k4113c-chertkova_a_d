@@ -52,6 +52,28 @@ Date of finished: .12.2022 <br />
 `docker run -d --name vault vault`
 ![image](https://user-images.githubusercontent.com/71637557/205464852-8b8d99be-777c-4fab-a744-f48d430b83e1.png)
 
+-- Создаем манифест для развертывания "пода" HashiCorp Vault, и при этом прокинуть внутрь порт 8200
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vault
+  labels:
+    environment: dev
+    tier: vault
+spec:
+  containers:
+    - name: vault
+      image: vault
+      ports:
+        - containerPort: 8200
+
+```
+Создаем под и проверям прошла ли операция.
+
+![image](https://user-images.githubusercontent.com/71637557/205465423-c2f20f64-0c8b-4bb6-a4c7-552261138609.png)
+
 
 4. После этого вам необходимо будет создать сервис для доступа к этому контейнеру, самый просто вариант - это выполнить команду:
 
