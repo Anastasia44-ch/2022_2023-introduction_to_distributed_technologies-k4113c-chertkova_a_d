@@ -50,9 +50,10 @@ ENTRYPOINT ["python3", "/app/1.py"]           # Говорим "Питон3, з�
 
 * 1.py
 
-> print("GLHF")
+> print("Hello world")
 
 - Установить Minikube используя оригинальную инструкцию
+
 - После установки вам необходимо развернуть minikube cluster
 
 > minikube start
@@ -61,4 +62,6 @@ ENTRYPOINT ["python3", "/app/1.py"]           # Говорим "Питон3, з�
 
 >minikube kubectl
 
+# Интересные статьи 
+(https://docs.docker.com/get-started/)
 
