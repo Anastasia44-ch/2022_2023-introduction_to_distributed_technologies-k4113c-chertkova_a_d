@@ -81,15 +81,21 @@ spec:
 
 ` minikube kubectl -- expose pod vault --type=NodePort --port=8200 `
 
+![image](https://user-images.githubusercontent.com/71637557/205465600-693bd8e8-839f-42b3-b093-a1902a74eba2.png)
+
+
 5. Команда выше создаст сервис, но как же вам попасть на ваш контейнер? Воспользуйтесь следующей командой:
 
 ` minikube kubectl -- port-forward service/vault 8200:8200 `
+
+![image](https://user-images.githubusercontent.com/71637557/205465640-8041b7df-1f71-47bf-9c32-d9a6cdb691b7.png)
+
 
 6. minikube прокинет порт вашего компьютера в контейнер и вы сможете зайти в vault по ссылке http://localhost:8200
 
 7. После перехода по ссылке у вас откроется интерфейс как на рисунке ниже
 
-![image](https://user-images.githubusercontent.com/71637557/205458681-ac16c98c-8576-4137-b43f-c2ec025eecbc.png)
+![image](https://user-images.githubusercontent.com/71637557/205465673-8f605041-89e0-4441-af3d-f2bedb847398.png)
 
 8. Для успешного завершения лабораторной работы вам необходимо войти в ваш vault ипользуя токен, который вам необходимо НАЙТИ, а не сгенерировать.
 
