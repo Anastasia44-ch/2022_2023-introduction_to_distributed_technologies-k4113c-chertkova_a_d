@@ -124,9 +124,47 @@ ____________________
 
 # MINIKUBE
 
+minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
+
+Minikube - утилита командной строки для настройки и запуска однонодового кластера Kubernetes в виртуальной машине на локальном компьютере.
+
+__________________________
+
 # Kubernetes (K8S)
 
+Kubernetes, также известная как K8s, представляет собой систему с открытым исходным кодом для автоматизации развертывания, масштабирования и управления контейнерными приложениями.
 
-# Интересные статьи 
-(https://docs.docker.com/get-started/)
+Pod в Kubernetes - это минимальная единица, в составе Пода может быть несколько контейнеров. У каждого пода есть уникальный IP-адрес. Для описания пода пишут манифест (manifest file).
+
+## Архитектура Kubernetes
+
+Работающий кластер Kubernetes включает в себя агента, запущенного на нодах (kubelet) и компоненты мастера (APIs, scheduler, etc), поверх решения с распределённым хранилищем.
+
+![image](https://user-images.githubusercontent.com/71637557/205464202-c7b3f8eb-d5c1-40b3-af93-8853cb394d73.png)
+
+### Нода Kubernetes
+
+При взгляде на архитектуру системы мы можем разбить его на сервисы, которые работают на каждой ноде и сервисы уровня управления кластера. На каждой ноде Kubernetes запускаются сервисы, необходимые для управления нодой со стороны мастера и для запуска приложений. Конечно, на каждой ноде запускается Docker. Docker обеспечивает загрузку образов и запуск контейнеров.
+
+### Kubelet
+
+Kubelet управляет pod'ами их контейнерами, образами, разделами, etc.
+
+### Kube-Proxy
+
+Также на каждой ноде запускается простой proxy-балансировщик. Этот сервис запускается на каждой ноде и настраивается в Kubernetes API. Kube-Proxy может выполнять простейшее перенаправление потоков TCP и UDP (round robin) между набором бэкендов.
+
+
+# Ссылки для работы
+
+https://www.docker.com
+https://minikube.sigs.k8s.io/docs/
+https://minikube.sigs.k8s.io/docs/start/
+https://docs.docker.com/get-started/
+https://kubernetes.io/ru/docs/tutorials/hello-minikube/
+https://kubernetes.io/ru/docs/tutorials/kubernetes-basics/
+https://kubernetes.io/docs/home/
+https://habr.com/ru/post/258443/
+https://hub.docker.com/_/vault/
+https://www.vaultproject.io
 
