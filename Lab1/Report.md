@@ -60,8 +60,7 @@ kind: Pod
 metadata:
   name: vault
   labels:
-    environment: dev
-    tier: vault
+    app: vault
 spec:
   containers:
     - name: vault
