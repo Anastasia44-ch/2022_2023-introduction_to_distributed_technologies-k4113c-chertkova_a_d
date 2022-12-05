@@ -40,7 +40,7 @@ Date of finished: .12.2022 <br />
   
   > kubectl create -f "C:\progect\lab2\Deployment.yaml"
   
-  ``
+  ```
   apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -68,7 +68,7 @@ spec:
           - name: REACT_APP_COMPANY_NAME
             value: ITMO
   
-  ``
+  ```
 
 ![image](https://user-images.githubusercontent.com/71637557/205740671-99c35729-8735-4d2e-aa7b-9f647d348d7e.png)
 
