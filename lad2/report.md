@@ -27,7 +27,8 @@ Date of finished: .12.2022 <br />
   1.1 Скачиваем образ  ifilyaninitmo/itdt-contained-frontend:master
   
   > команда docker pull ifilyaninitmo/itdt-contained-frontend:master
-  ![image](https://user-images.githubusercontent.com/71637557/205738378-ea9602d4-69d4-4b83-ae17-3976603328d3.png)
+
+![image](https://user-images.githubusercontent.com/71637557/205738378-ea9602d4-69d4-4b83-ae17-3976603328d3.png)
   
   1.2 Создаем контейнер на основе образа
   
@@ -35,9 +36,9 @@ Date of finished: .12.2022 <br />
 
 ![image](https://user-images.githubusercontent.com/71637557/205738994-4656de28-7247-4f57-9b13-52bddd8fb191.png)
 
-  1.3 Создаем контролер Deployment.yaml
+  1.3 Создаем и запускаем контролер Deployment.yaml
   
-  ```
+  ``
   apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -65,7 +66,11 @@ spec:
           - name: REACT_APP_COMPANY_NAME
             value: ITMO
   
-  ```
+  ``
+> kubectl create -f "C:\progect\lab2\Deployment.yaml"
+
+![image](https://user-images.githubusercontent.com/71637557/205740671-99c35729-8735-4d2e-aa7b-9f647d348d7e.png)
+
 ______
 * развертывание создает 2 экземпляра пода (количество указано в поле replicas);
 * в поле селектора указано, как развертывание (Deployment) обнаружит, какими подами (Pods) нужно управлять. В этом манифесте просто выбираем одну метку, определенную в шаблоне Pod‘а (app: frontend);
@@ -75,6 +80,8 @@ ______
 ______
 
 2. Создать сервис через который у вас будет доступ на эти "поды". Выбор типа сервиса остается на ваше усмотрение.
+
+
 
 3. Запустить в minikube режим проброса портов и подключитесь к вашим контейнерам через веб браузер.
 
@@ -101,3 +108,4 @@ https://itnan.ru/post.php?c=1&p=448094 <br />
 https://gb.ru/posts/kak-razvernut-prilozhenie-na-kubernetes <br />
 https://ealebed.github.io/posts/2018/знакомство-с-kubernetes-часть-5-deployments/ <br />
 https://stepik.org/lesson/550146/step/1?unit=543783 <br />
+https://itisgood.ru/2020/02/27/shpargalka-po-kubernetes-service/
