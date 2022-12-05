@@ -112,6 +112,8 @@ ______
   ![image](https://user-images.githubusercontent.com/71637557/205745466-0ef9e6e0-67c2-4ba0-bbf4-8b46198eb6bf.png)
 
 
+![image](https://user-images.githubusercontent.com/71637557/205747635-07bec29f-72a5-42b8-b9ab-271ae08bb3cc.png)
+
 
 ## Немного теории
 
