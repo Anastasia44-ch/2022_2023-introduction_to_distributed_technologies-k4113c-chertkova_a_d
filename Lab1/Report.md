@@ -117,7 +117,7 @@ spec:
 
 Схема организации контейнера и сервиса, нарисованная в draw.io.
 
-![image](https://user-images.githubusercontent.com/71637557/205518282-b3b914b1-d9ed-4868-a47a-43b99ebf3634.png)
+![image](https://user-images.githubusercontent.com/71637557/205748198-a981d9af-a435-4baf-870c-12518cf43942.png)
 
 _____________________________
 
