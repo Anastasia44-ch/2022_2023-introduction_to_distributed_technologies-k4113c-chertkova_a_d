@@ -103,7 +103,13 @@ ______
 
 5. Проверьте логи контейнеров, приложите логи в отчёт.
 
+  5.1 Проверим количество подов
+
 ![image](https://user-images.githubusercontent.com/71637557/205744541-659764e7-cc40-4c8c-a2f3-135ac2e36b5b.png)
+
+  5.2 Смотрим логи подов
+  
+  ![image](https://user-images.githubusercontent.com/71637557/205745466-0ef9e6e0-67c2-4ba0-bbf4-8b46198eb6bf.png)
 
 
 
