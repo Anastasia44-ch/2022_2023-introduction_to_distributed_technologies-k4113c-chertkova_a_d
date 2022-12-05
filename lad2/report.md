@@ -36,7 +36,9 @@ Date of finished: .12.2022 <br />
 
 ![image](https://user-images.githubusercontent.com/71637557/205738994-4656de28-7247-4f57-9b13-52bddd8fb191.png)
 
-  1.3 Создаем и запускаем контролер Deployment.yaml
+  1.3 Сохраним данный манифест в файл Deployment.yaml и запустим его в кластере Kubernetes с помощью команды:
+  
+  > kubectl create -f "C:\progect\lab2\Deployment.yaml"
   
   ``
   apiVersion: apps/v1
@@ -67,7 +69,6 @@ spec:
             value: ITMO
   
   ``
-> kubectl create -f "C:\progect\lab2\Deployment.yaml"
 
 ![image](https://user-images.githubusercontent.com/71637557/205740671-99c35729-8735-4d2e-aa7b-9f647d348d7e.png)
 
