@@ -32,9 +32,9 @@ Deployment имеет возможность делать плавающие/п�
 
 ## Полезные ссылки для работы
 
-https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-https://docs.docker.com/engine/reference/commandline/pull/
-https://itnan.ru/post.php?c=1&p=448094
-https://gb.ru/posts/kak-razvernut-prilozhenie-na-kubernetes
-https://ealebed.github.io/posts/2018/знакомство-с-kubernetes-часть-5-deployments/
-https://stepik.org/lesson/550146/step/1?unit=543783
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment/  <br />
+https://docs.docker.com/engine/reference/commandline/pull/ <br />
+https://itnan.ru/post.php?c=1&p=448094 <br />
+https://gb.ru/posts/kak-razvernut-prilozhenie-na-kubernetes <br />
+https://ealebed.github.io/posts/2018/знакомство-с-kubernetes-часть-5-deployments/ <br />
+https://stepik.org/lesson/550146/step/1?unit=543783 <br />
