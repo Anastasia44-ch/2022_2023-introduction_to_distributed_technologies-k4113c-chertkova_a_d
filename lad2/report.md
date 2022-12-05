@@ -22,6 +22,69 @@ Date of finished: .12.2022 <br />
 
 # Ход работы
 
+1. Вам необходимо создать deployment с 2 репликами контейнера ifilyaninitmo/itdt-contained-frontend:master и передать переменные в эти реплики: REACT_APP_USERNAME, REACT_APP_COMPANY_NAME.
+
+  1.1 Скачиваем образ  ifilyaninitmo/itdt-contained-frontend:master
+  
+  > команда docker pull ifilyaninitmo/itdt-contained-frontend:master
+  ![image](https://user-images.githubusercontent.com/71637557/205738378-ea9602d4-69d4-4b83-ae17-3976603328d3.png)
+  
+  1.2 Создаем контейнер на основе образа
+  
+  > команда docker run -d --name container ifilyaninitmo/itdt-contained-frontend:master
+
+![image](https://user-images.githubusercontent.com/71637557/205738994-4656de28-7247-4f57-9b13-52bddd8fb191.png)
+
+  1.3 Создаем контролер Deployment.yaml
+  
+  ```
+  apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  labels:
+    app: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers: 
+      - name: frontend-container
+        image: ifilyaninitmo/itdt-contained-frontend:master
+        ports:
+        - containerPort: 3000
+        env:
+          - name: REACT_APP_USERNAME
+            value: Anastasia
+          - name: REACT_APP_COMPANY_NAME
+            value: ITMO
+  
+  ```
+______
+* развертывание создает 2 экземпляра пода (количество указано в поле replicas);
+* в поле селектора указано, как развертывание (Deployment) обнаружит, какими подами (Pods) нужно управлять. В этом манифесте просто выбираем одну метку, определенную в шаблоне Pod‘а (app: frontend);
+* описание шаблона Pod‘а в поле template: spec “требует” запустить docker-контейнер frontend, из образа frontend. Данному поду будет присвоена метка app: frontend;
+* развертывание открывает 3000-й порт контейнера.
+* Шаблон пода задается в объекте Template. С помощью свойства env объявляем внутри подов переменные окружения REACT_APP_USERNAME и REACT_APP_COMPANY_NAME со значениями Anastasia и ITMO, соответственно.
+______
+
+2. Создать сервис через который у вас будет доступ на эти "поды". Выбор типа сервиса остается на ваше усмотрение.
+
+3. Запустить в minikube режим проброса портов и подключитесь к вашим контейнерам через веб браузер.
+
+4. Проверьте на странице в веб браузере переменные REACT_APP_USERNAME, REACT_APP_COMPANY_NAME и Container name. Изменяются ли они? Если да то почему?
+
+5. Проверьте логи контейнеров, приложите логи в отчёт.
+
+
+
+
 ## Немного теории
 
 У контроллера Deployment - Вы описываете yaml-манифест того, в каком состоянии Вы хотите видеть свое приложение, а Деплоймент сам об этом позаботится. Деплоймент - самый популярный контроллер в Кубернетес, почти никогда Поды не запускают без Деплоймента. Подобно Сервису Деплоймент находит Поды себе под контроль с помощью Лейблов.
