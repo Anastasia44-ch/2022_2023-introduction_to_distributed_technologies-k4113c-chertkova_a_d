@@ -82,14 +82,28 @@ ______
 
 2. Создать сервис через который у вас будет доступ на эти "поды". Выбор типа сервиса остается на ваше усмотрение.
 
+> minikube kubectl -- expose deployment frontend-deployment --port=3000 --type=NodePort --target-port=3000 --name=service
+
+![image](https://user-images.githubusercontent.com/71637557/205743269-278e3cf2-45c6-421c-ad48-5e2479981513.png)
 
 
 3. Запустить в minikube режим проброса портов и подключитесь к вашим контейнерам через веб браузер.
 
+Пробрасываем локальный порт на порт контейнера
+
+>  minikube kubectl -- port-forward service/service 3000:3000
+
+![image](https://user-images.githubusercontent.com/71637557/205743928-040acf50-e465-4dd6-848e-fe944be694bc.png)
+
 4. Проверьте на странице в веб браузере переменные REACT_APP_USERNAME, REACT_APP_COMPANY_NAME и Container name. Изменяются ли они? Если да то почему?
+
+Страница http://localhost:3000
+
+![image](https://user-images.githubusercontent.com/71637557/205744153-e6260cdb-2248-4e10-a3ae-1324cb9d95c5.png)
 
 5. Проверьте логи контейнеров, приложите логи в отчёт.
 
+![image](https://user-images.githubusercontent.com/71637557/205744541-659764e7-cc40-4c8c-a2f3-135ac2e36b5b.png)
 
 
 
