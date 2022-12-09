@@ -6,7 +6,7 @@ Group: K4113c <br />
 Author:  `Chertkova Anastasia Denisovna ` <br />
 Lab: `Lab1 ` <br />
 Date of create: 02.12.2022 <br />
-Date of finished: .12.2022 <br />
+Date of finished: 07.12.2022 <br />
 
 
 # Лабораторная работа №1 "Установка Docker и Minikube, мой первый манифест."
