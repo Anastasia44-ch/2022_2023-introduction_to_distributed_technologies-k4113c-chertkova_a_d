@@ -6,7 +6,7 @@ Group: K4113c <br />
 Author:  `Chertkova Anastasia Denisovna ` <br />
 Lab: `Lab2 ` <br />
 Date of create: 05.12.2022 <br />
-Date of finished: .12.2022 <br />
+Date of finished: 07.12.2022 <br />
 
 
 
