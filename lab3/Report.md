@@ -102,15 +102,14 @@ spec:
 
 Генерируем сертификат TLS с использованием OpenSSL.
 
-Запускаем opensll и генерируем приватный ключ RSA. Создаем подпись сертификата (CSR).
+Запускаем opensll и генерируем приватный ключ.
 
+```
+openssl genrsa -out ca.key 2048
 
-
-Подписываем сертификат тем же ключом, с помощью которого он был создан.
-
-
-Создаем секрет
-
+openssl req -x509 -new -nodes -days 365 -key ca.key -out ca.crt -subj "/CN=anastasia.lab3.com"
+```
+![image](https://user-images.githubusercontent.com/71637557/208994054-8e3777b0-6011-4f3d-a10f-ef7f6fb48a1e.png)
 
 
 Создаем Ingress. Подключаем Ingress в minikube.
