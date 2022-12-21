@@ -104,14 +104,14 @@ spec:
 
 Запускаем opensll и генерируем приватный ключ RSA. Создаем подпись сертификата (CSR).
 
-![image](https://user-images.githubusercontent.com/71637557/208966612-7e3ccf14-4281-4e43-b4e7-0b7e5adadadd.png)
+
 
 Подписываем сертификат тем же ключом, с помощью которого он был создан.
-![image](https://user-images.githubusercontent.com/71637557/208967521-1de097fe-f3de-484b-b9d9-1f28cf794120.png)
+
 
 Создаем секрет
 
-![image](https://user-images.githubusercontent.com/71637557/208971811-f95f6c2c-7084-48fc-a208-88b83d96d1c7.png)
+
 
 Создаем Ingress. Подключаем Ingress в minikube.
 
@@ -149,7 +149,7 @@ spec:
 
 ## 5. В hosts пропишите FQDN и IP адрес вашего ingress и попробуйте перейти в браузере по FQDN имени.
 
-![image](https://user-images.githubusercontent.com/71637557/208975791-3ed823a1-7ae5-4702-bde6-ac41aff5282d.png)
+
 
 
 ## 6. Войдите в веб приложение по вашему FQDN используя HTTPS и проверьте наличие сертификата.
