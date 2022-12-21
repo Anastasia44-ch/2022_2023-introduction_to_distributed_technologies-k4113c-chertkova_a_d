@@ -24,7 +24,7 @@ Date of finished: .12.2022 <br />
 
 1. Вам необходимо создать configMap с переменными: REACT_APP_USERNAME, REACT_APP_COMPANY_NAME.
 
-Пример манифеста
+Пример манифеста configMap
 
 ```
 apiVersion: v1
@@ -34,9 +34,54 @@ metadata:
 data:
   react_app_user_name: "Anastasia"
   react_app_company_name: "ITMO"
+```
+Сохранение этого манифеста в config.yaml и отправим его в кластер Kubernetes. 
+
+![image](https://user-images.githubusercontent.com/71637557/208948338-0ed541bf-340f-46c8-8987-55f16e93b483.png)
+
+2. Вам необходимо создать replicaSet с 2 репликами контейнера ifilyaninitmo/itdt-contained-frontend:master и используя ранее созданный configMap передать переменные REACT_APP_USERNAME, REACT_APP_COMPANY_NAME .
+
+Пример манифеста ReplicaSet
 
 ```
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset
+  labels:
+    app: lab3
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: lab3
+  template:
+    metadata:
+      labels:
+        app: lab3
+    spec:
+      containers:
+      - name: container
+        image: ifilyaninitmo/itdt-contained-frontend:master
+        ports:
+        - containerPort: 3000
+        env:
+        - name: REACT_APP_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: configmap
+              key: react_app_user_name
+        - name: REACT_APP_COMPANY_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: configmap
+              key: react_app_company_name
+```
 
+
+Сохранение этого контролера в config.yaml и отправим его в кластер Kubernetes. 
+
+![image](https://user-images.githubusercontent.com/71637557/208952865-be593f5e-c747-433c-980a-efe27b9a1a5b.png)
 
 
 # Теория
@@ -45,4 +90,7 @@ data:
 
 https://kubernetes.io/docs/concepts/configuration/configmap/ <br />
 https://stepik.org/lesson/593295/step/1?unit=588304 <br />
+https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/   <br />
 https://stepik.org/lesson/550147/step/1?unit=543784  <br />
+https://kubernetes.io/docs/concepts/configuration/secret/
+
