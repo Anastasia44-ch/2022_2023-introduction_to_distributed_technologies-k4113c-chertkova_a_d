@@ -161,6 +161,10 @@ spec:
 
 ![image](https://user-images.githubusercontent.com/71637557/209005536-e1ad8d94-305e-4304-8ffd-749dca0372e6.png)
 
+## Схема организации контейеров и сервисов нарисованная вами в draw.io или Visio.
+
+![image](https://user-images.githubusercontent.com/71637557/209007267-ec72564f-fe36-4ed7-92ff-79c4496ffc44.png)
+
 
 # Теория
 
