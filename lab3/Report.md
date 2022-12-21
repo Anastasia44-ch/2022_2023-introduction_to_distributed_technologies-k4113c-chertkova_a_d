@@ -82,7 +82,7 @@ spec:
 
 ![image](https://user-images.githubusercontent.com/71637557/208952865-be593f5e-c747-433c-980a-efe27b9a1a5b.png)
 
-3. Включить minikube addons enable ingress и сгенерировать TLS сертификат, импортировать сертификат в minikube.
+## 3. Включить minikube addons enable ingress и сгенерировать TLS сертификат, импортировать сертификат в minikube.
 
 Созданим для начало сервис. 
 
@@ -112,6 +112,47 @@ spec:
 Подписываем сертификат тем же ключом, с помощью которого он был создан.
 ![image](https://user-images.githubusercontent.com/71637557/208967521-1de097fe-f3de-484b-b9d9-1f28cf794120.png)
 
+Создаем секрет
+
+![image](https://user-images.githubusercontent.com/71637557/208971811-f95f6c2c-7084-48fc-a208-88b83d96d1c7.png)
+
+Создаем Ingress. Подключаем Ingress в minikube.
+
+![image](https://user-images.githubusercontent.com/71637557/208973821-31b64795-6357-47c2-940b-fbd83ba79584.png)
+
+
+## 4. Создать ingress в minikube, где указан ранее импортированный сертификат, FQDN по которому вы будете заходить и имя сервиса который вы создали ранее.
+
+Созданим манифест для Ingress
+
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  tls:
+  - hosts:
+      - anastasia
+    secretName: sec
+  rules:
+  - host: anastasia
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: serv
+            port:
+              number: 3000
+```
+## 5. В hosts пропишите FQDN и IP адрес вашего ingress и попробуйте перейти в браузере по FQDN имени.
+
+![image](https://user-images.githubusercontent.com/71637557/208975791-3ed823a1-7ae5-4702-bde6-ac41aff5282d.png)
+
+
+## 6. Войдите в веб приложение по вашему FQDN используя HTTPS и проверьте наличие сертификата.
 
 # Теория
 
