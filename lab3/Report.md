@@ -78,10 +78,31 @@ spec:
               key: react_app_company_name
 ```
 
-
 Сохранение этого контролера в config.yaml и отправим его в кластер Kubernetes. 
 
 ![image](https://user-images.githubusercontent.com/71637557/208952865-be593f5e-c747-433c-980a-efe27b9a1a5b.png)
+
+3. Включить minikube addons enable ingress и сгенерировать TLS сертификат, импортировать сертификат в minikube.
+
+Созданим для начало сервис. 
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: serv
+spec:
+  type: NodePort
+  selector:
+    app: lab3
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+```
+
+![image](https://user-images.githubusercontent.com/71637557/208955988-3561fdd8-6562-4df4-9637-f5835ae113ad.png)
+
 
 
 # Теория
@@ -91,6 +112,8 @@ spec:
 https://kubernetes.io/docs/concepts/configuration/configmap/ <br />
 https://stepik.org/lesson/593295/step/1?unit=588304 <br />
 https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/   <br />
+https://kubernetes.io/docs/concepts/services-networking/service/  <br />
+https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/#enable-the-ingress-controller  <br />
 https://stepik.org/lesson/550147/step/1?unit=543784  <br />
 https://kubernetes.io/docs/concepts/configuration/secret/
 
