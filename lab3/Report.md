@@ -24,6 +24,19 @@ Date of finished: .12.2022 <br />
 
 1. Вам необходимо создать configMap с переменными: REACT_APP_USERNAME, REACT_APP_COMPANY_NAME.
 
+Пример манифеста
+
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+data:
+  react_app_user_name: "Anastasia"
+  react_app_company_name: "ITMO"
+
+```
+
 
 
 # Теория
@@ -31,3 +44,5 @@ Date of finished: .12.2022 <br />
 # Полезные материалы
 
 https://kubernetes.io/docs/concepts/configuration/configmap/ <br />
+https://stepik.org/lesson/593295/step/1?unit=588304 <br />
+https://stepik.org/lesson/550147/step/1?unit=543784  <br />
