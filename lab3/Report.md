@@ -99,7 +99,7 @@ spec:
 
 ```
 
-![image](https://user-images.githubusercontent.com/71637557/208991799-87639770-683a-4987-be2e-3669e18f8644.png)
+![image](https://user-images.githubusercontent.com/71637557/208997224-789f61e0-d2e8-458e-b3b3-4becf5b1f288.png)
 
 Генерируем сертификат TLS с использованием OpenSSL.
 
@@ -110,12 +110,12 @@ openssl genrsa -out ca.key 2048
 
 openssl req -x509 -new -nodes -days 365 -key ca.key -out ca.crt -subj "/CN=lab3.com"
 ```
-![image](https://user-images.githubusercontent.com/71637557/208994054-8e3777b0-6011-4f3d-a10f-ef7f6fb48a1e.png)
+![image](https://user-images.githubusercontent.com/71637557/208997092-cf2a93b9-52a1-46c2-a806-2222a829b92b.png)
 
 
 Создаем Ingress. Подключаем Ingress в minikube.
 
-![image](https://user-images.githubusercontent.com/71637557/208973821-31b64795-6357-47c2-940b-fbd83ba79584.png)
+![image](https://user-images.githubusercontent.com/71637557/208997395-98020501-69d8-43a5-ad51-2cd3a0bf2916.png)
 
 
 ## 4. Создать ingress в minikube, где указан ранее импортированный сертификат, FQDN по которому вы будете заходить и имя сервиса который вы создали ранее.
@@ -145,7 +145,8 @@ spec:
               number: 3000  
 ```
 
-![image](https://user-images.githubusercontent.com/71637557/208992514-5cfc6d8d-3aeb-4d49-8b9b-53f355b978fb.png)
+![image](https://user-images.githubusercontent.com/71637557/208997307-79dde732-a69d-4199-b257-4b5b0be16ca4.png)
+
 
 ## 5. В hosts пропишите FQDN и IP адрес вашего ingress и попробуйте перейти в браузере по FQDN имени.
 
