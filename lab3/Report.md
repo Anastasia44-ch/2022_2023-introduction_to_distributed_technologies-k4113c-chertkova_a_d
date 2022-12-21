@@ -159,6 +159,7 @@ spec:
 
 ![image](https://user-images.githubusercontent.com/71637557/209001191-80c40825-7f45-4c24-ba95-be60201c28a6.png)
 
+![image](https://user-images.githubusercontent.com/71637557/209005536-e1ad8d94-305e-4304-8ffd-749dca0372e6.png)
 
 
 # Теория
