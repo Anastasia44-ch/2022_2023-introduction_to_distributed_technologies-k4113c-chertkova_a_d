@@ -147,12 +147,17 @@ spec:
             port:
               number: 3000
 ```
+
+![image](https://user-images.githubusercontent.com/71637557/208976560-0fcd765e-9f5d-4654-b6b3-37ed4a5b6b65.png)
+
 ## 5. В hosts пропишите FQDN и IP адрес вашего ingress и попробуйте перейти в браузере по FQDN имени.
 
 ![image](https://user-images.githubusercontent.com/71637557/208975791-3ed823a1-7ae5-4702-bde6-ac41aff5282d.png)
 
 
 ## 6. Войдите в веб приложение по вашему FQDN используя HTTPS и проверьте наличие сертификата.
+
+
 
 # Теория
 
