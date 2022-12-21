@@ -112,11 +112,13 @@ openssl req -x509 -new -nodes -days 365 -key ca.key -out ca.crt -subj "/CN=lab3.
 ```
 ![image](https://user-images.githubusercontent.com/71637557/208997092-cf2a93b9-52a1-46c2-a806-2222a829b92b.png)
 
+Создаем секрет 
+
+![image](https://user-images.githubusercontent.com/71637557/208998192-d4712aab-599b-4655-beac-14fc627878bb.png)
 
 Создаем Ingress. Подключаем Ingress в minikube.
 
 ![image](https://user-images.githubusercontent.com/71637557/208997395-98020501-69d8-43a5-ad51-2cd3a0bf2916.png)
-
 
 ## 4. Создать ingress в minikube, где указан ранее импортированный сертификат, FQDN по которому вы будете заходить и имя сервиса который вы создали ранее.
 
