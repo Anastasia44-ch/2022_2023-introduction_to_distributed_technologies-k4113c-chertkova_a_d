@@ -4,9 +4,9 @@ Course: Introduction to distributed technologies <br />
 Year: 2022/2023 <br />
 Group: K4113c <br />
 Author:  `Chertkova Anastasia Denisovna ` <br />
-Lab: `Lab2 ` <br />
-Date of create: 05.12.2022 <br />
-Date of finished: 07.12.2022 <br />
+Lab: `Lab3 ` <br />
+Date of create: 09.12.2022 <br />
+Date of finished: .12.2022 <br />
 
 
 
@@ -22,6 +22,12 @@ Date of finished: 07.12.2022 <br />
 
 # Ход работы
 
+1. Вам необходимо создать configMap с переменными: REACT_APP_USERNAME, REACT_APP_COMPANY_NAME.
+
+
+
 # Теория
 
 # Полезные материалы
+
+https://kubernetes.io/docs/concepts/configuration/configmap/ <br />
