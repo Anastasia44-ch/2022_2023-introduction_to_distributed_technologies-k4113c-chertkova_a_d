@@ -152,11 +152,12 @@ spec:
 
 ## 5. В hosts пропишите FQDN и IP адрес вашего ingress и попробуйте перейти в браузере по FQDN имени.
 
-
+![image](https://user-images.githubusercontent.com/71637557/209001319-a476079d-f625-4e73-8f0b-40c3f714bb3e.png)
 
 
 ## 6. Войдите в веб приложение по вашему FQDN используя HTTPS и проверьте наличие сертификата.
 
+![image](https://user-images.githubusercontent.com/71637557/209001191-80c40825-7f45-4c24-ba95-be60201c28a6.png)
 
 
 # Теория
