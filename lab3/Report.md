@@ -46,7 +46,7 @@ data:
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replicas
+  name: replic
   labels:
     app: lab3
 spec:
@@ -87,7 +87,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sv
+  name: servic1
 spec:
   type: NodePort
   selector:
@@ -96,6 +96,7 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
+
 ```
 
 ![image](https://user-images.githubusercontent.com/71637557/208991799-87639770-683a-4987-be2e-3669e18f8644.png)
@@ -107,7 +108,7 @@ spec:
 ```
 openssl genrsa -out ca.key 2048
 
-openssl req -x509 -new -nodes -days 365 -key ca.key -out ca.crt -subj "/CN=anastasia.lab3.com"
+openssl req -x509 -new -nodes -days 365 -key ca.key -out ca.crt -subj "/CN=lab3.com"
 ```
 ![image](https://user-images.githubusercontent.com/71637557/208994054-8e3777b0-6011-4f3d-a10f-ef7f6fb48a1e.png)
 
@@ -125,23 +126,23 @@ openssl req -x509 -new -nodes -days 365 -key ca.key -out ca.crt -subj "/CN=anast
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ing
+  name: ing-manifest
 spec:
   tls:
   - hosts:
-      - anastasia.lab3.com
-    secretName: l3
+      - lab3.com
+    secretName: l3-secret
   rules:
-  - host: anastasia.lab3.com
+  - host: lab3.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: sv
+            name: servic1
             port:
-              number: 3000
+              number: 3000  
 ```
 
 ![image](https://user-images.githubusercontent.com/71637557/208992514-5cfc6d8d-3aeb-4d49-8b9b-53f355b978fb.png)
