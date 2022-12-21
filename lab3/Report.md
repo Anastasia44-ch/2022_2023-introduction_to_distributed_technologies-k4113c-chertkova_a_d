@@ -37,7 +37,6 @@ data:
 ```
 Сохранение этого манифеста в config.yaml и отправим его в кластер Kubernetes. 
 
-![image](https://user-images.githubusercontent.com/71637557/208948338-0ed541bf-340f-46c8-8987-55f16e93b483.png)
 
 2. Вам необходимо создать replicaSet с 2 репликами контейнера ifilyaninitmo/itdt-contained-frontend:master и используя ранее созданный configMap передать переменные REACT_APP_USERNAME, REACT_APP_COMPANY_NAME .
 
@@ -47,7 +46,7 @@ data:
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replicaset
+  name: replicas
   labels:
     app: lab3
 spec:
@@ -80,8 +79,6 @@ spec:
 
 Сохранение этого контролера в config.yaml и отправим его в кластер Kubernetes. 
 
-![image](https://user-images.githubusercontent.com/71637557/208952865-be593f5e-c747-433c-980a-efe27b9a1a5b.png)
-
 ## 3. Включить minikube addons enable ingress и сгенерировать TLS сертификат, импортировать сертификат в minikube.
 
 Созданим для начало сервис. 
@@ -90,7 +87,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: serv
+  name: sv
 spec:
   type: NodePort
   selector:
@@ -101,7 +98,7 @@ spec:
       targetPort: 3000
 ```
 
-![image](https://user-images.githubusercontent.com/71637557/208955988-3561fdd8-6562-4df4-9637-f5835ae113ad.png)
+![image](https://user-images.githubusercontent.com/71637557/208991799-87639770-683a-4987-be2e-3669e18f8644.png)
 
 Генерируем сертификат TLS с использованием OpenSSL.
 
