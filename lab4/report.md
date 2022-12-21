@@ -24,6 +24,10 @@ Date of finished: .12.2022 <br />
 
 1. При запуске minikube установите плагин CNI=calico и режим работы Multi-Node Clusters одновеременно, в рамках данной лабораторной работы вам нужно развернуть 2 ноды.
 
+``` 
+minikube start --network-plugin=cni --cni=calico --nodes 2 --kubernetes-version=v1.25.3
+```
+![image](https://user-images.githubusercontent.com/71637557/209014629-ed6733e2-cbfc-4d63-bc02-17c564730ed3.png)
 
 
 # Теория
