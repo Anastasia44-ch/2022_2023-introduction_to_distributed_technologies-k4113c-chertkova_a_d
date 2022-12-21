@@ -29,6 +29,15 @@ minikube start --network-plugin=cni --cni=calico --nodes 2 --kubernetes-version=
 ```
 ![image](https://user-images.githubusercontent.com/71637557/209014629-ed6733e2-cbfc-4d63-bc02-17c564730ed3.png)
 
+2. Посмотрим список созданных узлов
+
+![image](https://user-images.githubusercontent.com/71637557/209017904-bc631f44-f2b3-4ad2-a47f-651c240ae155.png)
+
+3. Развернем модуль calicoctl
+
+``` 
+kubectl apply -f calicoctl.yaml
+```
 
 # Теория
 
