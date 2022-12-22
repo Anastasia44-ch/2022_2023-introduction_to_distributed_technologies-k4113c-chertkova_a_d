@@ -40,7 +40,21 @@ kubectl apply -f calicoctl.yaml
 ```
 ![image](https://user-images.githubusercontent.com/71637557/209020289-7087bd77-e068-4252-8220-2d5e4733a941.png)
 
+4. Создадим ip pool, удалим ippool по умолчанию:
 
+``` 
+kubectl exec -i -n kube-system calicoctl -- /calicoctl create -f - < ip_pool.yaml
+kubectl exec -i -n kube-system calicoctl -- /calicoctl  delete ippools default-ipv4-ippool
+kubectl exec -i -n kube-system calicoctl -- /calicoctl  get ippools -o wide
+``` 
+5. Давайте создадим ресурсы, сервис, карту конфигурации.
+```
+kubectl apply -f resources.yaml
+```
+Пример манифеста:
+```
+
+```
 # Теория
 
 # Полезные ссылки
