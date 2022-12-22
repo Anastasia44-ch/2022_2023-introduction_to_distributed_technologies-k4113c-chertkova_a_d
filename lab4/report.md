@@ -51,6 +51,8 @@ kubectl exec -i -n kube-system calicoctl -- /calicoctl  get ippools -o wide
 ```
 kubectl apply -f resources.yaml
 ```
+![image](https://user-images.githubusercontent.com/71637557/209064101-7b0e8f9b-d67d-46a2-8a16-ec5311400c5d.png)
+
 6. Проверьте IP-адреса наших pods.
 ```
 kubectl get pods -o wide
