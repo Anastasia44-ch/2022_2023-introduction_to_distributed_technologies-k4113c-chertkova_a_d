@@ -51,10 +51,17 @@ kubectl exec -i -n kube-system calicoctl -- /calicoctl  get ippools -o wide
 ```
 kubectl apply -f resources.yaml
 ```
-Пример манифеста:
+6. Проверьте IP-адреса наших pods.
+```
+kubectl get pods -o wide
 ```
 
+7.Попингуем поды
 ```
+kubectl exec -it lab4-app-krtx9  -- ping -c4 192.168.2.1
+```
+
+
 # Теория
 
 # Полезные ссылки
