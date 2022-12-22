@@ -60,6 +60,7 @@ kubectl get pods -o wide
 ```
 kubectl exec -it lab4-app-krtx9  -- ping -c4 192.168.2.1
 ```
+![Снимок экрана (3)](https://user-images.githubusercontent.com/71637557/209048709-aab417be-8bd8-4435-8499-5e5d6e9dfd54.png)
 
 
 # Теория
