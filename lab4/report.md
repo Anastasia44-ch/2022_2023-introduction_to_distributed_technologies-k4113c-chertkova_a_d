@@ -64,8 +64,11 @@ kubectl get pods -o wide
 
 7.Попингуем поды
 ```
-kubectl exec -it lab4-rs-  -- ping -c4 000.000.0.0
+kubectl exec -it lab4-d4h9x  -- ping -c4 192.168.2.1
 ```
+![image](https://user-images.githubusercontent.com/71637557/209921207-d2c66a9f-17c6-4351-9ad1-643bd032fea1.png)
+
+
 ![Снимок экрана (3)](https://user-images.githubusercontent.com/71637557/209048709-aab417be-8bd8-4435-8499-5e5d6e9dfd54.png)
 
 
