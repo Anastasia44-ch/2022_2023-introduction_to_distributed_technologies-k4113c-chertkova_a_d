@@ -57,7 +57,7 @@ kubectl apply -f resources.yaml
 ```
 kubectl get pods -o wide
 ```
-![image](https://user-images.githubusercontent.com/71637557/209917033-b3781313-33ca-4cbd-8475-49d7a566dddf.png)
+![image](https://user-images.githubusercontent.com/71637557/209918859-c26767b7-d7da-4a31-ba59-f16f36bd40e1.png)
 
 ![image](https://user-images.githubusercontent.com/71637557/209915331-0d0bb6d7-5635-469e-aefd-a7d0b9fb9aad.png)
 
