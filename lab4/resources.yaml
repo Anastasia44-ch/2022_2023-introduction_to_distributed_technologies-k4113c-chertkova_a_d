@@ -11,7 +11,7 @@ data:
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: lab4-rs
+  name: lab4
   labels:
     app: lab4
 spec:
